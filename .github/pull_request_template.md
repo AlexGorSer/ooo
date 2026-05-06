@@ -21,6 +21,9 @@
 
 [//]: # (TODO добавить)
 
+## Coverage Status
+![Coverage](../badges/coverage-jest%20coverage.svg)
+
 ## Checklist ✅
 ### Mandatory Requirements
 - [ ] Meets all task criteria (RSS-ECOMM-X_XX)
