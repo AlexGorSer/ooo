@@ -1,15 +1,23 @@
 {
-  "name": "untitled",
+  "name": "NgKitty-Right",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "jest",
+    "test:fast": "jest --maxWorkers=50% --passWithNoTests",
+    "test:changed": "jest -o --maxWorkers=50%",
+    "test:watch": "jest --watch --maxWorkers=50%",
+    "test:cov": "jest --coverage --coverageReporters=text-summary --coverageReporters=text --coverageReporters=json-summary --coverageReporters=lcov",
+    "lint": "eslint src --fix",
+    "format": "prettier src -w",
+    "type-check": "tsc -b --noEmit"
   },
   "private": true,
-  "packageManager": "npm@11.6.1",
+  "type": "module",
+  "packageManager": "pnpm@10.30.0",
   "dependencies": {
     "@angular/common": "^21.2.0",
     "@angular/compiler": "^21.2.0",
@@ -17,16 +25,31 @@
     "@angular/forms": "^21.2.0",
     "@angular/platform-browser": "^21.2.0",
     "@angular/router": "^21.2.0",
+    "globals": "^17.5.0",
     "rxjs": "~7.8.0",
-    "tslib": "^2.3.0"
+    "tslib": "^2.3.0",
+    "zone.js": "^0.16.1"
   },
   "devDependencies": {
     "@angular/build": "^21.2.9",
     "@angular/cli": "^21.2.9",
     "@angular/compiler-cli": "^21.2.0",
+    "@eslint/js": "^10.0.1",
+    "@stylistic/eslint-plugin": "^5.10.0",
+    "@types/jest": "^30.0.0",
+    "angular-eslint": "^21.3.1",
+    "eslint": "^10.2.1",
+    "eslint-plugin-import-x": "^4.16.2",
+    "eslint-plugin-unicorn": "^64.0.0",
+    "jest": "^30.3.0",
+    "jest-environment-jsdom": "^30.3.0",
+    "jest-preset-angular": "^16.1.4",
     "jsdom": "^28.0.0",
     "prettier": "^3.8.1",
+    "stylelint": "^17.9.1",
+    "stylelint-config-standard": "^40.0.0",
+    "ts-jest": "^29.4.9",
     "typescript": "~5.9.2",
-    "vitest": "^4.0.8"
+    "typescript-eslint": "^8.59.1"
   }
 }
