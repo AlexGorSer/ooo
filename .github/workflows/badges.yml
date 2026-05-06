@@ -39,5 +39,5 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add -f badges/
-          git diff --staged --quiet || git commit -m "Update coverage badges"
+          git diff --staged --quiet || git commit -m "docs: update coverage badges"
           git push
