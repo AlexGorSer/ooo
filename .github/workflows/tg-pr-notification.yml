@@ -13,6 +13,7 @@ jobs:
         with:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
+          format: html
           message: |
             🚀 <b>Открыт новый Pull Request</b>
             📝 <b>Название:</b> ${{ github.event.pull_request.title }}
